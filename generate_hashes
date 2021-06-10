@@ -1,7 +1,0 @@
-#!/bin/bash
-
-egrep '[^[:space:]]' |
-nl -n ln |
-while read line; do echo "${line}" | sha256sum; done |
-cut -d ' ' -f 1 |
-sort
