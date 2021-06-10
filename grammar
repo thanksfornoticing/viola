@@ -1,0 +1,8 @@
+operator_character ::= unicode_symbol
+identifier_character ::= unicode_letter | unicode_number | "_"
+operator ::= "\" identifier | operator_character+
+identifier ::= "\" operator | identifier_character+
+term ::= identifier | "(" expression ")" | "{" program "}"
+expression ::= term | term operator expression
+statement ::= expression "."
+program ::= statement*
